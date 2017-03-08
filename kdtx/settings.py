@@ -24,7 +24,7 @@ SECRET_KEY = 'jwbl2cq_7jgz&6_ttwh@z38cnrq#k==1equ48a+i&$n(@(!-s2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+#TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -67,7 +67,7 @@ else:
     MYSQL_HOST = 'localhost'
     MYSQL_PORT = '3306'
     MYSQL_USER = 'root'
-    MYSQL_PASS = 'root'
+    MYSQL_PASS = '731018'
     MYSQL_DB = 'kdtx'
 
 DATABASES = {
@@ -99,11 +99,28 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+#TEMPLATE_LOADERS = (
+#    'django.template.loaders.filesystem.Loader',
+#    'django.template.loaders.app_directories.Loader',
     #     'django.template.loaders.eggs.Loader',
-)
+#)
 
 STATIC_URL = '/static/'
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\', '/'),)
+#TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\', '/'),)
