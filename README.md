@@ -1,2 +1,3 @@
-# kddz
-卡迪电子进销存系统
+# inventory managment system
+进销存管理系统
+
