@@ -18,7 +18,7 @@ def all_goods(request):
     datas = []
     amount = 0
     for good in goods:
-        kadi = GoodsShop.objects.get(goods=good, shop__name='卡迪电子')
+        kadi = GoodsShop.objects.get(goods=good, shop__name='tongzhuang')
         m = {'goods': good, 'kadi': kadi}
         amount += kadi.remain
         datas.append(m)
@@ -29,7 +29,7 @@ def all_goods(request):
 
     return render_to_response('all_goods.html',
                               {'request': request, 'data1': datas[:shang], 'data2': datas[shang:shang * 2],
-                               'data3': datas[shang * 2:], 'title': '卡迪管理系统', 'header': '卡迪管理系统', 'amount': amount})
+                               'data3': datas[shang * 2:], 'title': 'jxc管理系统', 'header': 'jxc管理系统', 'amount': amount})
 
 
 @login_required(login_url='/kucun/login')
@@ -39,7 +39,7 @@ def delete_goods(request):
         datas = []
         amount = 0
         for good in goods:
-            kadi = GoodsShop.objects.get(goods=good, shop__name='卡迪电子')
+            kadi = GoodsShop.objects.get(goods=good, shop__name='tongzhuang')
             m = {'goods': good, 'kadi': kadi}
             amount += kadi.remain
             datas.append(m)
@@ -898,7 +898,7 @@ def make_order(request):
         goods = Goods.objects.filter(is_delete=False).order_by('goods_name')
         datas = []
         for good in goods:
-            kadi = GoodsShop.objects.get(goods=good, shop__name='卡迪电子')
+            kadi = GoodsShop.objects.get(goods=good, shop__name='tongzhuang')
             m = {'goods': good, 'kadi': kadi}
             # amount += kadi.remain
             datas.append(m)

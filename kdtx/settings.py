@@ -68,7 +68,7 @@ else:
     MYSQL_PORT = '3306'
     MYSQL_USER = 'root'
     MYSQL_PASS = '731018'
-    MYSQL_DB = 'kdtx'
+    MYSQL_DB = 'inventory'
 
 DATABASES = {
     'default': {
