@@ -109,7 +109,7 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 CREATE TABLE IF NOT EXISTS `auth_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `password` varchar(128) NOT NULL,
-  `last_login` datetime NOT NULL,
+  `last_login` datetime,
   `is_superuser` tinyint(1) NOT NULL,
   `username` varchar(30) NOT NULL,
   `first_name` varchar(30) NOT NULL,
