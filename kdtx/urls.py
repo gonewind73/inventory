@@ -13,5 +13,5 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^kucun/', include('kucun.urls')),
-    url(r'^$',love),
+    url(r'^$',include(admin.site.urls)),
 ]

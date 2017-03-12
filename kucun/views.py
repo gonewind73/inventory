@@ -1180,11 +1180,11 @@ def sell_ranking_chart(request):
 
 def love(request):
     today = datetime.datetime.today()
-    love_day = datetime.datetime(2011, 11, 14)
-    lose_day = datetime.datetime(2014, 11, 18)
-    my_birth = datetime.datetime(1992, 6, 12)
-    she_birth = datetime.datetime(1993, 11, 17)
-    dead_day = datetime.datetime(2065, 11, 17)
+    love_day = datetime.datetime(1996, 1, 20)
+    lose_day = datetime.datetime(2017, 5, 10)
+    my_birth = datetime.datetime(1973, 1, 1)
+    she_birth = datetime.datetime(1979, 01, 02)
+    dead_day = datetime.datetime(2053, 1, 1)
     love_days = (today - love_day).days
     love_seconds = (today - love_day).seconds
     lose_days = (today - lose_day).days
